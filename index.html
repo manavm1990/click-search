@@ -27,7 +27,6 @@
       images.forEach((img) => img.addEventListener('click', (e) => {
         search.value = e.target.dataset.brand;
         search.action = `https://www.showmeweights.com/catalogsearch/result/?q=${search.value}`;
-        console.log(search.action);
         document.querySelector('#my-form').submit();
       })
       )
