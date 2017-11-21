@@ -15,6 +15,10 @@
 
         cursor: pointer;
       }
+
+      p {
+        max-width: 40rem;
+      }
     </style>
   </head>
 
@@ -23,6 +27,10 @@
       <input type="search" id="my-search">
       <input type="submit" value="Go!">
     </form>
+
+    <p>Click on an image below, and it will fill in the 'name' of that logo and run a search at: https://showmeweights.com. <em>Keep in mind that you will just have to observe this from dev tools, as the query cannot be submitted from an external site.</em></p>
+
+    <p>However, a similar principle could be applied and <em>should</em> work if the search query is run on the same site...theoretically.</p>
 
     <img src="apollo.jpg" alt="Apollo Athletics logo" width="150" height="50" data-brand="apollo athletics">
 
