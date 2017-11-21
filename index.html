@@ -1,0 +1,36 @@
+<!doctype>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Click to Search</title>
+    <meta name="description" content="A simple boilerplate demo of conducting a search for a brand name by clicking on its logo">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  </head>
+
+  <body>
+    <form action="" method="GET" id="my-form">
+      <input type="search" id="my-search">
+      <input type="submit" value="Go!">
+    </form>
+
+    <img src="apollo.jpg" alt="Apollo Athletics logo" width="150" height="50" data-brand="apollo athletics">
+
+    <img src="atlantis.jpg" alt="Apollo Athletics logo" width="150" height="50" data-brand="atlantis">
+    
+    <img src="usa.png" alt="Apollo Athletics logo" width="120" height="106" data-brand="apollo athletics">
+    
+    <script>
+      const search = document.querySelector('#my-form');
+      const images = document.querySelectorAll('img');
+
+      images.forEach((img) => img.addEventListener('click', (e) => {
+        search.value = e.target.dataset.brand;
+        search.action = `https://www.showmeweights.com/catalogsearch/result/?q=${search.value}`;
+        console.log(search.action);
+        document.querySelector('#my-form').submit();
+      })
+      )
+    </script>
+  </body>
+</html>
