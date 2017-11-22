@@ -39,14 +39,15 @@
     <img src="usa.png" alt="USA Strength &amp; Performance Logo" width="120" height="106" data-brand="usa strength and performance">
     
     <script>
-      const images = document.querySelectorAll('img');
+      const IMAGES = document.querySelectorAll('img');
 
-      images.forEach((img) => img.addEventListener('click', (e) => {
-        const search = document.querySelector('#my-form');
-
-        search.value = e.target.dataset.brand;
-        search.action = `https://www.showmeweights.com/catalogsearch/result/?q=${search.value}`;
-        document.querySelector('#my-form').submit();
+      IMAGES.forEach((img) => img.addEventListener('click', (e) => {
+        const SEARCH = document.querySelector('#my-form');
+        const SEARCH_INPUT = document.querySelector('#my-search');
+        
+        SEARCH_INPUT.value = e.target.dataset.brand;
+        SEARCH.action = `https://www.showmeweights.com/catalogsearch/result/?q=${SEARCH_INPUT.value}`;
+        SEARCH.submit();
       })
       )
     </script>
